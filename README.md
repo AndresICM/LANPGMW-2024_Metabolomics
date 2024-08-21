@@ -178,7 +178,7 @@ We can observe that several spectra are produced exclusively by strain H-KF8 in 
   <img src="/Figs/chromatogram_05.jpg" alt="Chromatogram" />
 </a>
 
-** Analyze the final output from the analysis
+## Analyze the final output from the analysis
 
 After processing all files. We should look at the feature lists tab from MZMine. There we can observe that we have a file called "Aligned feature list 13C gaps". Double-click on that
 
@@ -192,7 +192,7 @@ Here we can observe the feature list, where each row is one detected MS spectra 
   <img src="/Figs/feat_list_02.jpg" alt="Feature List" />
 </a>
 
-** Remove media blanks MS spectra
+## Remove media blanks MS spectra
 
 Now we want to remove all the MS spectra that are part of the culture media and not produced by our strains.
 
@@ -224,6 +224,51 @@ Now we have two Feature lists
 </a>
 
 ** Export Feature lists in GNPS format
+
+We are going to export both Feature lists. 
+
+First, select "Aligned feature list 13C gaps".
+Then go to "Feature List Methods", "Export Feature List", and select Molecular "networking files"
+
+<a href="/Figs/export_01.jpg">
+  <img src="/Figs/export_01.jpg" alt="Export files" />
+</a>
+
+Then click "Select", and in "File name" write the name that you want your files to be named. In this case, I selected "GM_workshop_Featurelist_complete". So I know that this file is from the Latin American genome mining workshop and that the feature list includes the media blank MS spectra.
+then press "save"
+
+<a href="/Figs/export_02.jpg">
+  <img src="/Figs/export_02.jpg" alt="Export files" />
+</a>
+
+Make sure that in Filter rows you select "MS2 or ION IDENTITY", so only MS spectra with MS2 are selected.
+
+<a href="/Figs/export_03.jpg">
+  <img src="/Figs/export_03.jpg" alt="Export files" />
+</a>
+
+Then, in your selected folder, you should have two files
+
+1. GM_workshop_Featurelist_complete_quant.csv
+
+  This file is a table that includes all the feature lists in your samples. Again, each row is an MS spectrum, and each column is each of the 18 samples.
+
+2. GM_workshop_Featurelist_complete_quant.mgf
+
+  This file contains the information on each spectrum. Contains the parent mass in *m/z*, and the *m/z* values of each fragment from that spectra, with the peak intensity of each spectrum.
+
+<a href="/Figs/export_04.jpg">
+  <img src="/Figs/export_04.jpg" alt="Export files" />
+</a>
+
+Now we need to repeat the export step but with the media blanks removed. This time the files will be named "GM_workshop_Featurelist_filtered" so we can know that there is no MS spectra that are originally from the culture media.
+
+After this, we have 4 files. And we are done with the processing steps in MZMine 3
+
+## Create a molecular network
+
+
+
 
 
 
