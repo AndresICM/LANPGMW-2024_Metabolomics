@@ -59,6 +59,15 @@ Double-click on the file, and install the software
 
 Reference: Schmid, R., Heuckeroth, S., Korf, A. et al. Integrative analysis of multimodal mass spectrometry data in MZmine 3. Nat Biotechnol 41, 447–449 (2023). https://doi.org/10.1038/s41587-023-01690-2
 
+## Download Cytoscape
+
+Cytoscape is a software frequently used to visualize networks, such as BGC networks or molecular networks. 
+
+Go to [Cytoscape webpage](https://cytoscape.org/download.html)
+
+Click on download Cytoscape for your operating system
+Install Cytoscape in your computer.
+
 ## Download the metabolomics dataset
 
 First, we need to go to Zenodo and download all the mzML raw data collected from the described strains. 
@@ -368,20 +377,19 @@ For more information about the rest of the parameters used for molecular network
 - visit the GNPS documentation: https://ccms-ucsd.github.io/GNPSDocumentation/networking/
 - Also visit Aron, A.T., Gentry, E.C., McPhail, K.L. et al. Reproducible molecular networking of untargeted mass spectrometry data using GNPS. Nat Protoc 15, 1954–1991 (2020). https://doi.org/10.1038/s41596-020-0317-5
 
-**To create the FBMN, it might take a few minutes or hours**
-
-## Feature Based Molecular Networking Statistics Guide (FBMN stats)
-
-While our molecular network is created, we want to analyze some basic statistics about our samples
-
-visit the [FBMN Stats Guide web server]([https://gnps.ucsd.edu/ProteoSAFe/static/gnps-splash.jsp](https://fbmn-statsguide.gnps2.org/)
+## Visualize the network using cytoscape
 
 
 
 
-In the future it will include:
-https://www.tfleao.com/general-8, 
-[Paired omics](https://pairedomicsdata.bioinformatics.nl/)
-[GNPS](https://gnps.ucsd.edu/ProteoSAFe/static/gnps-splash.jsp)
+
+
+
+
+
+
+
+
+
 
 {% include links.md %}
