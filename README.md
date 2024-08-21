@@ -374,7 +374,7 @@ For more information about the rest of the parameters used for molecular network
 
 While our molecular network is created, we want to analyze some basic statistics about our samples
 
-visit the [FBMN Stats Guide web server]([https://gnps.ucsd.edu/ProteoSAFe/static/gnps-splash.jsp](https://fbmn-statsguide.gnps2.org/))
+visit the [FBMN Stats Guide web server]([https://gnps.ucsd.edu/ProteoSAFe/static/gnps-splash.jsp](https://fbmn-statsguide.gnps2.org/)
 
 
 
