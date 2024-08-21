@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/6283c3ff-5dfc-401d-9e2a-89acdb1d052d)---
+---
 title: "Metabolomics workshop"
 teaching: 15 min
 exercises: 75 min
