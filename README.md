@@ -99,7 +99,7 @@ In addition, there is information relevant to the analysis, such as the names of
 
 At last, there is a file named MZMine_FBMN_batch.xml that collects all the information necessary for the analysis using MZMine
 
-** Analysis using MZMine
+## Analysis using MZMine
 
 Load batch file
 
@@ -273,9 +273,11 @@ Then, in your selected folder, you should have two files
   <img src="/Figs/export_04.jpg" alt="Export files" />
 </a>
 
-Now we need to repeat the export step but with the media blanks removed. This time the files will be named "GM_workshop_Featurelist_filtered" so we can know that there is no MS spectra that are originally from the culture media.
+Now we need to repeat the export step but with the media blanks removed. This time the files will be named "GM_workshop_Featurelist_filtered" so we can know that there are no MS spectra that are originally from the culture media.
 
-After this, we have 4 files. And we are done with the processing steps in MZMine 3
+Additionally, to annotate your results using SIRIUS, we need to export our data by going to "Feature List Methods", "Export Feature List", and selecting "SIRIUS / CSI-FingerID". We can do that using only our "GM_workshop_Featurelist_filtered".
+
+After this, we have 5 files. And we are done with the processing steps in MZMine 3
 
 ## Create a molecular network
 
@@ -339,7 +341,7 @@ Finally, we are going to select the "metadata_table.tsv" as our "Sample Metadata
 </a>
 
 In the "Selected Files" section, we should be able to see the three files in their corresponding sections.
-Click on finish selection after checking everything is ok.
+Click on "finish selection" after checking everything is ok.
 
 <a href="/Figs/FBMN_09.jpg">
   <img src="/Figs/FBMN_09.jpg" alt="FBMN" />
@@ -377,7 +379,90 @@ For more information about the rest of the parameters used for molecular network
 - visit the GNPS documentation: https://ccms-ucsd.github.io/GNPSDocumentation/networking/
 - Also visit Aron, A.T., Gentry, E.C., McPhail, K.L. et al. Reproducible molecular networking of untargeted mass spectrometry data using GNPS. Nat Protoc 15, 1954–1991 (2020). https://doi.org/10.1038/s41596-020-0317-5
 
-## Visualize the network using cytoscape
+## Statistics analysis using FBMN STATS guide web server
+
+Now we want to observe how different are the metabolic profiles of our samples. For that, we are going to calculate a Principal Coordinate Analysis (PCoA)
+
+https://fbmn-statsguide.gnps2.org/
+
+Go into 
+[FBMN STATS guide](https://fbmn-statsguide.gnps2.org/)
+
+Select "Data Preparation"
+
+<a href="/Figs/FBMN-STATS_01.jpg">
+  <img src="/Figs/FBMN-STATS_01.jpg" alt="FBMN" />
+</a>
+
+In file origin select "Quantification table and metadata files". 
+-In the Quantification Table section, select the MZMine output file "GM_workshop_Featurelist_complete_quant.csv" This table contains the information of the two strains and the media. We want to observe how different our samples' metabolomic profiles are, in comparison with the culture media. 
+- in the Meta Data Table section, include our metadata file "metadata_table.tsv"
+
+<a href="/Figs/FBMN-STATS_02.jpg">
+  <img src="/Figs/FBMN-STATS_02.jpg" alt="FBMN" />
+</a>
+
+After loading your files, click "Submit Data for Statistics!"
+
+<a href="/Figs/FBMN-STATS_03.jpg">
+  <img src="/Figs/FBMN-STATS_03.jpg" alt="FBMN" />
+</a>
+
+Check that your data have been properly submitted by checking that you have the "Data preparation was successful!" 
+
+<a href="/Figs/FBMN-STATS_04.jpg">
+  <img src="/Figs/FBMN-STATS_04.jpg" alt="FBMN" />
+</a>
+
+Now we should go to the "PERMANOVA & PCoA" section
+
+<a href="/Figs/FBMN-STATS_05.jpg">
+  <img src="/Figs/FBMN-STATS_05.jpg" alt="FBMN" />
+</a>
+
+Select Principal Coordinate Analysis
+
+<a href="/Figs/FBMN-STATS_06.jpg">
+  <img src="/Figs/FBMN-STATS_06.jpg" alt="FBMN" />
+</a>
+
+Now we could change how we want to color our samples.
+Select "attribute for multivariate analysis" ATTRIBUTE_media. This will color our samples according to the media (ISP2 or ISP2-ASW)
+
+<a href="/Figs/FBMN-STATS_07.jpg">
+  <img src="/Figs/FBMN-STATS_07.jpg" alt="FBMN" />
+</a>
+
+We can observe that there is a difference between the samples prepared with ISP2 and ISP2-ASW
+
+
+<a href="/Figs/FBMN-STATS_08.jpg">
+  <img src="/Figs/FBMN-STATS_08.jpg" alt="FBMN" />
+</a>
+
+Now if we color our samples by strain, selecting ATTRIBUTE_strain in "attribute for multivariate analysis"
+
+We can observe that *Streptomyces* sp. Vc74B-19 metabolic profile is quite different than the ones from *Streptomyces* sp. H-KF8 and the culture media. 
+
+Also, it is possible to observe that *Streptomyces* sp. H-KF8 metabolomic profile differs more from the media when cultured in ISP2-ASW
+
+<a href="/Figs/FBMN-STATS_09.jpg">
+  <img src="/Figs/FBMN-STATS_09.jpg" alt="FBMN" />
+</a>
+
+There are several statistics that you can do using FBMN STATS guide, you can check the preprint here
+
+Shah, A. K. P., Walter, A., Ottosson, F., Russo, F., Navarro-Díaz, M., Boldt, J., Kalinski, J.-C., Kontou, E. E., Elofson, J., Polyzois, A., González-Marín, C., Farrell, S., Aggerbeck, M. R., Pruksatrakul, T., Chan, N., Wang, Y., Pöchhacker, M., Brungs, C., Cámara, B., … Petras, D. (2023). The Hitchhiker’s Guide to Statistical Analysis of Feature-based Molecular Networks from Non-Targeted Metabolomics Data. ChemRxiv, 1–83. https://doi.org/10.26434/CHEMRXIV-2023-WWBT0
+
+## Annotation using SIRIUS
+
+
+
+
+More information on SIRIUS: Kai Dührkop, Markus Fleischauer, Marcus Ludwig, Alexander A. Aksenov, Alexey V. Melnik, Marvin Meusel, Pieter C. Dorrestein, Juho Rousu, and Sebastian Böcker, SIRIUS 4: Turning tandem mass spectra into metabolite structure information. Nature Methods 16, 299–302, 2019.
+
+
+## Visualize the network using Cytoscape
 
 
 
