@@ -138,6 +138,9 @@ Briefly, MZMine is now detecting all the masses present in your samples, groupin
 
 You should note, that the parameters used are specific for this dataset, you might need to change some of the values when analyzing your own samples.
 
+For more information: 
+Nothias, LF., Petras, D., Schmid, R. et al. Feature-based molecular networking in the GNPS analysis environment. Nat Methods 17, 905–908 (2020). https://doi.org/10.1038/s41592-020-0933-6 
+
 ## Explore the structure of our data
 
 In the "MS data files" from MZMine you can observe all the 18 LC-MS/MS files in mzML format that we loaded
@@ -223,7 +226,7 @@ Now we have two Feature lists
   <img src="/Figs/blank_04.jpg" alt="Blank substraction" />
 </a>
 
-** Export Feature lists in GNPS format
+## Export Feature lists in GNPS format
 
 We are going to export both Feature lists. 
 
@@ -267,8 +270,111 @@ After this, we have 4 files. And we are done with the processing steps in MZMine
 
 ## Create a molecular network
 
+Go into 
+[GNPS](https://gnps.ucsd.edu/ProteoSAFe/static/gnps-splash.jsp) webpage 
 
+and login using your username and password
 
+Then we should go to "Advanced Analysis Tools", and Select "Analyze" in the Feature Networking
+
+<a href="/Figs/FBMN_01.jpg">
+  <img src="/Figs/FBMN_01.jpg" alt="FBMN" />
+</a>
+
+Then we should write a title for our network. We could use something like "GM_workshop_FBMN_filtered", because we are going to use the feature list with the media blanks removed.
+
+Following that, in "File Selection", click on "Select Input File"
+
+<a href="/Figs/FBMN_02.jpg">
+  <img src="/Figs/FBMN_02.jpg" alt="FBMN" />
+</a>
+
+We now need to upload our feature lists and our metadata table. Click on "Upload files"
+
+<a href="/Figs/FBMN_03.jpg">
+  <img src="/Figs/FBMN_03.jpg" alt="FBMN" />
+</a>
+
+Here we can create a folder in our GNPS. I created a new folder called "LATAM_GM_workshop". 
+Click on that folder. Then in the "File Drag and Drop", drag and drop the following files:
+1. GM_workshop_Featurelist_filtered.mgf
+2. GM_workshop_Featurelist_filtered_quant.csv
+3. metadata_table.tsv
+
+<a href="/Figs/FBMN_04.jpg">
+  <img src="/Figs/FBMN_04.jpg" alt="FBMN" />
+</a>
+
+Return to the "Select Input Files" after uploading your files. You should be able to see the three uploaded files in your directory
+
+<a href="/Figs/FBMN_05.jpg">
+  <img src="/Figs/FBMN_05.jpg" alt="FBMN" />
+</a>
+
+We are going to select the "GM_workshop_Featurelist_filtered.mgf" file as "MS2 file in MGF format"
+
+<a href="/Figs/FBMN_06.jpg">
+  <img src="/Figs/FBMN_06.jpg" alt="FBMN" />
+</a>
+
+then we are going to select "GM_workshop_Featurelist_filtered_quant.csv" as the "Feature Quantification Table"
+
+<a href="/Figs/FBMN_07.jpg">
+  <img src="/Figs/FBMN_07.jpg" alt="FBMN" />
+</a>
+
+Finally, we are going to select the "metadata_table.tsv" as our "Sample Metadata Table"
+
+<a href="/Figs/FBMN_08.jpg">
+  <img src="/Figs/FBMN_08.jpg" alt="FBMN" />
+</a>
+
+In the "Selected Files" section, we should be able to see the three files in their corresponding sections.
+Click on finish selection after checking everything is ok.
+
+<a href="/Figs/FBMN_09.jpg">
+  <img src="/Figs/FBMN_09.jpg" alt="FBMN" />
+</a>
+
+After selecting the files, we need to adjust the parameters for our network
+Since our data was collected using a high-resolution LC-MS/MS, we could adjust the 
+-"Precursor Ion Mass Tolerance" to 0.02 Da
+    This value affects the clustering of nearly identical MS/MS spectra through MS-Cluster.
+-"Fragment Ion Mass Tolerance" to 0.02 Da
+    Sets the allowable deviation in m/z values for fragment ions when clustering MS/MS spectra
+
+<a href="/Figs/FBMN_10.jpg">
+  <img src="/Figs/FBMN_10.jpg" alt="FBMN" />
+</a>
+
+Then we need to select our thresholds to create the molecular network
+
+-"min pair cos" to 0.7 
+    The minimum cosine score required between a pair of consensus MS/MS spectra for an edge to be created in the molecular network.
+-"Minimum matched fragment ions" to 6
+    Specify the minimum number of common fragment ions that two consensus MS/MS spectra must share to be connected by an edge in the molecular network.
+
+<a href="/Figs/FBMN_11.jpg">
+  <img src="/Figs/FBMN_11.jpg" alt="FBMN" />
+</a>
+
+After this, write your email, so you know when your network is finished. Then click "Submit"
+
+<a href="/Figs/FBMN_12.jpg">
+  <img src="/Figs/FBMN_12.jpg" alt="FBMN" />
+</a>
+
+For more information about the rest of the parameters used for molecular networking:
+- visit the GNPS documentation: https://ccms-ucsd.github.io/GNPSDocumentation/networking/
+- Also visit Aron, A.T., Gentry, E.C., McPhail, K.L. et al. Reproducible molecular networking of untargeted mass spectrometry data using GNPS. Nat Protoc 15, 1954–1991 (2020). https://doi.org/10.1038/s41596-020-0317-5
+
+**To create the FBMN, it might take a few minutes or hours**
+
+## Feature Based Molecular Networking Statistics Guide (FBMN stats)
+
+While our molecular network is created, we want to analyze some basic statistics about our samples
+
+visit the [FBMN Stats Guide web server]([https://gnps.ucsd.edu/ProteoSAFe/static/gnps-splash.jsp](https://fbmn-statsguide.gnps2.org/))
 
 
 
