@@ -1,4 +1,4 @@
----
+![image](https://github.com/user-attachments/assets/6283c3ff-5dfc-401d-9e2a-89acdb1d052d)---
 title: "Metabolomics workshop"
 teaching: 15 min
 exercises: 75 min
@@ -46,24 +46,47 @@ Wait for a confirmation email, and you now have a GNPS account.
 Reference: Wang, M., Carver, J., Phelan, V. et al. Sharing and community curation of mass spectrometry data with Global Natural Products Social Molecular Networking. Nat Biotechnol 34, 828–837 (2016). https://doi.org/10.1038/nbt.3597
 
 ## Download MZMine v3.9
-First go to the MZMine 3.9 release
+First, go to the MZMine 3.9 release
 [MZMine 3.9](https://github.com/mzmine/mzmine/releases/tag/v3.9.0)
 
 Select the installable file depending on your computer
 
 <a href="/Figs/Download_MZMine.jpg">
-  <img src="/Figs/Download_MZMine.jpg" alt="MZmine 3, a MS data analysis platform " />
+  <img src="/Figs/Download_MZMine.jpg" alt="MZmine 3, an MS data analysis platform " />
 </a>
 
-Double click on the file, and install the software
+Double-click on the file, and install the software
 
 Reference: Schmid, R., Heuckeroth, S., Korf, A. et al. Integrative analysis of multimodal mass spectrometry data in MZmine 3. Nat Biotechnol 41, 447–449 (2023). https://doi.org/10.1038/s41587-023-01690-2
 
 ## Download the metabolomics dataset
 
+First, we need to go to Zenodo and download all the mzML raw data collected from the described strains. 
 
+https://zenodo.org/api/records/13352458/files-archive
 
+After downloading the compressed file, we need to decompress it and store the files in a folder on our computer. 
 
+## The dataset
+
+This data was collected from crude extracts from two marine *Streptomyces*: *Streptomyces* sp. H-KF8, and *Streptomyces* sp. Vc74B-19. 
+Two media were used, ISP2 and ISP2 prepared with artificial seawater (ASW), to evaluate the effect of replicating the natural environment from which these strains were isolated. 
+
+<a href="/Figs/Datasets.png">
+  <img src="/Figs/Datasets.png" alt="Data collection from *Streptomyces* sp. H-KF8, and *Streptomyces* sp. Vc74B-19." />
+</a>
+
+We downloaded 18 LC-MS/MS-derived files in mzML format. This data was collected by Dr. Mauricio Caraballo-Rodriguez in the Dorrestein Lab, at the University of California San Diego.
+There are files from each strain, in ISP2 and ISP2-ASW, besides the crude extracts from the culture media. The data is in triplicates.
+
+Besides mzML files, there is a file metadata_table.tsv, that contains all the relevant information from this dataset. 
+Includes the names of the samples, relevant data collection, and taxonomic information. 
+
+It is important for later, that the information that 
+
+<a href="/Figs/Metadata.jpg">
+  <img src="/Figs/Metadata.jpg" alt="Data collection from *Streptomyces* sp. H-KF8, and *Streptomyces* sp. Vc74B-19." />
+</a>
 
 
 In the future it will include:
