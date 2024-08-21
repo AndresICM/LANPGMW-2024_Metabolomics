@@ -275,8 +275,6 @@ Then, in your selected folder, you should have two files
 
 Now we need to repeat the export step but with the media blanks removed. This time the files will be named "GM_workshop_Featurelist_filtered" so we can know that there are no MS spectra that are originally from the culture media.
 
-Additionally, to annotate your results using SIRIUS, we need to export our data by going to "Feature List Methods", "Export Feature List", and selecting "SIRIUS / CSI-FingerID". We can do that using only our "GM_workshop_Featurelist_filtered".
-
 After this, we have 5 files. And we are done with the processing steps in MZMine 3
 
 ## Create a molecular network
@@ -454,16 +452,9 @@ There are several statistics that you can do using FBMN STATS guide, you can che
 
 Shah, A. K. P., Walter, A., Ottosson, F., Russo, F., Navarro-Díaz, M., Boldt, J., Kalinski, J.-C., Kontou, E. E., Elofson, J., Polyzois, A., González-Marín, C., Farrell, S., Aggerbeck, M. R., Pruksatrakul, T., Chan, N., Wang, Y., Pöchhacker, M., Brungs, C., Cámara, B., … Petras, D. (2023). The Hitchhiker’s Guide to Statistical Analysis of Feature-based Molecular Networks from Non-Targeted Metabolomics Data. ChemRxiv, 1–83. https://doi.org/10.26434/CHEMRXIV-2023-WWBT0
 
-## Annotation using SIRIUS
-
-
-
-
-More information on SIRIUS: Kai Dührkop, Markus Fleischauer, Marcus Ludwig, Alexander A. Aksenov, Alexey V. Melnik, Marvin Meusel, Pieter C. Dorrestein, Juho Rousu, and Sebastian Böcker, SIRIUS 4: Turning tandem mass spectra into metabolite structure information. Nature Methods 16, 299–302, 2019.
-
-
 ## Visualize the network using Cytoscape
 
+We need to check if our GNPS network is done processing. You might have received an email, otherwise go to your GNPS account and click on "Jobs"
 
 
 
@@ -474,7 +465,7 @@ More information on SIRIUS: Kai Dührkop, Markus Fleischauer, Marcus Ludwig, Ale
 
 
 
-
-
+In the future it will include: 
+SIRIUS: Kai Dührkop, Markus Fleischauer, Marcus Ludwig, Alexander A. Aksenov, Alexey V. Melnik, Marvin Meusel, Pieter C. Dorrestein, Juho Rousu, and Sebastian Böcker, SIRIUS 4: Turning tandem mass spectra into metabolite structure information. Nature Methods 16, 299–302, 2019.
 
 {% include links.md %}
