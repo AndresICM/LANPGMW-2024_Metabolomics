@@ -67,7 +67,7 @@ https://zenodo.org/api/records/13352458/files-archive
 
 After downloading the compressed file, we need to decompress it and store the files in a folder on our computer. 
 
-## The dataset
+## Import the dataset, and use the batch file to analyze your data
 
 This data was collected from crude extracts from two marine *Streptomyces*: *Streptomyces* sp. H-KF8, and *Streptomyces* sp. Vc74B-19. 
 Two media were used, ISP2 and ISP2 prepared with artificial seawater (ASW), to evaluate the effect of replicating the natural environment from which these strains were isolated. 
@@ -92,40 +92,138 @@ At last, there is a file named MZMine_FBMN_batch.xml that collects all the infor
 
 ** Analysis using MZMine
 
-1. Load batch file
+Load batch file
 
-Open MZMine3, and click on "Open", and then in "Batch Mode
+Open MZMine3, click on "Open", and then in "Batch Mode
+
+
 <a href="/Figs/batch_01.jpg">
   <img src="/Figs/batch_01.jpg" alt="Load batch file" />
 </a>
 
+
 Here you should select load, and search for your downloaded files on your computer. Then select the MZMine_FBMN_batch.xml file
 In confirmation, you should select Replace the batch steps.
+
 
 <a href="/Figs/batch_02.jpg">
   <img src="/Figs/batch_02.jpg" alt="Load batch file" />
 </a>
 
+
 Then double-click on import MS data
+
 
 <a href="/Figs/batch_03.jpg">
   <img src="/Figs/batch_03.jpg" alt="Load batch file" />
 </a>
 
+
 Select from your computer the 18 mzML files from this dataset
+
 
 <a href="/Figs/batch_04.jpg">
   <img src="/Figs/batch_04.jpg" alt="Load batch file" />
 </a>
 
-After this, every file should be included in the batch-processing mode. Select OK afterwards so the files begin to process in the meantime.
+
+After this, every file should be included in the batch-processing mode. Select OK afterward so the files begin to process in the meantime.
+
 
 <a href="/Figs/batch_05.jpg">
   <img src="/Figs/batch_05.jpg" alt="Load batch file" />
 </a>
 
+Briefly, MZMine is now detecting all the masses present in your samples, grouping them, and then aligning them, so you can know in which sample each detected spectrum is present
 
+You should note, that the parameters used are specific for this dataset, you might need to change some of the values when analyzing your own samples.
 
+## Explore the structure of our data
+
+In the "MS data files" from MZMine you can observe all the 18 LC-MS/MS files in mzML format that we loaded
+
+<a href="/Figs/MZMine_datafiles.jpg">
+  <img src="/Figs/MZMine_datafiles.jpg" alt="Datasets" />
+</a>
+
+Let's inspect what the two of these files look like. We could select one file from *Streptomyces* sp. H-KF8 in ISP2, and one in ISP2-ASW
+We can select both files, then right-click and select "Show chromatograms"
+
+<a href="/Figs/chromatogram_01.jpg">
+  <img src="/Figs/chromatogram_01.jpg" alt="Chromatogram" />
+</a>
+
+Here we can select the mass range that we want to observe. Since we want to see all the spectra detected, click "Auto range". It will automatically will select masses ranging from 100 *m/z* to almost 3,749 *m/z*
+Click "OK" then
+
+<a href="/Figs/chromatogram_02.jpg">
+  <img src="/Figs/chromatogram_02.jpg" alt="Chromatogram" />
+</a>
+
+The software will display the Total Ion Chromatogram (TIC) from both samples. In this case, strain H-KF8 is displayed in pink when cultured in ISP2-ASW, and in black when cultured in ISP2
+
+<a href="/Figs/chromatogram_03.jpg">
+  <img src="/Figs/chromatogram_03.jpg" alt="Chromatogram" />
+</a>
+
+We can select a section of the chromatogram to inspect the differences of the metabolomic profiles of these samples
+
+<a href="/Figs/chromatogram_04.jpg">
+  <img src="/Figs/chromatogram_04.jpg" alt="Chromatogram" />
+</a>
+
+We can observe that several spectra are produced exclusively by strain H-KF8 in ISP2-ASW
+
+<a href="/Figs/chromatogram_05.jpg">
+  <img src="/Figs/chromatogram_05.jpg" alt="Chromatogram" />
+</a>
+
+** Analyze the final output from the analysis
+
+After processing all files. We should look at the feature lists tab from MZMine. There we can observe that we have a file called "Aligned feature list 13C gaps". Double-click on that
+
+<a href="/Figs/feat_list_01.jpg">
+  <img src="/Figs/feat_list_01.jpg" alt="Feature list" />
+</a>
+
+Here we can observe the feature list, where each row is one detected MS spectra with its *m/z* and retention time (RT). Each column is one of the 18 samples. If MS spectra are detected in a sample, then the height of the peak is displayed in the table
+
+<a href="/Figs/feat_list_02.jpg">
+  <img src="/Figs/feat_list_02.jpg" alt="Feature List" />
+</a>
+
+** Remove media blanks MS spectra
+
+Now we want to remove all the MS spectra that are part of the culture media and not produced by our strains.
+
+For that, we need to go to "Feature List Methods", then click on "Feature List Filtering", and then on "Feature List Blank Subtraction"
+
+<a href="/Figs/blank_01.jpg">
+  <img src="/Figs/blank_01.jpg" alt="Blank substraction" />
+</a>
+
+In the "Blank/Control raw data files" section, we need to select "Specific raw data files", and then select
+
+<a href="/Figs/blank_02.jpg">
+  <img src="/Figs/blank_02.jpg" alt="Blank substraction" />
+</a>
+
+Here we need to select all the samples that belong to the crude extracts from the Media. There are 6 in total. 
+Press OK afterward
+
+<a href="/Figs/blank_03.jpg">
+  <img src="/Figs/blank_03.jpg" alt="Blank substraction" />
+</a>
+
+Now we have two Feature lists
+1. Aligned feature list 13C gaps. That is the original feature list including media MS spectra
+2. Aligned feature list 13C gaps subtracted. Feature list with media blanks removed
+
+<a href="/Figs/blank_04.jpg">
+  <img src="/Figs/blank_04.jpg" alt="Blank substraction" />
+</a>
+
+** Export Feature lists in GNPS format
 
 
 
