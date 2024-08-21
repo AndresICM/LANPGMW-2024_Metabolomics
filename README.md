@@ -43,6 +43,22 @@ Then fill in the following information:
   -Password
 Wait for a confirmation email, and you now have a GNPS account.
 
+Reference: Wang, M., Carver, J., Phelan, V. et al. Sharing and community curation of mass spectrometry data with Global Natural Products Social Molecular Networking. Nat Biotechnol 34, 828–837 (2016). https://doi.org/10.1038/nbt.3597
+
+## Download MZMine v3.9
+First go to the MZMine 3.9 release
+[MZMine 3.9](https://github.com/mzmine/mzmine/releases/tag/v3.9.0)
+
+Select the installable file depending on your computer
+
+<a href="/Figs/Download_MZMine.jpg">
+  <img src="/Figs/Download_MZMine.jpg" alt="MZmine 3, a MS data analysis platform " />
+</a>
+
+Double click on the file, and install the software
+
+Reference: Schmid, R., Heuckeroth, S., Korf, A. et al. Integrative analysis of multimodal mass spectrometry data in MZmine 3. Nat Biotechnol 41, 447–449 (2023). https://doi.org/10.1038/s41587-023-01690-2
+
 ## Download the metabolomics dataset
 
 
