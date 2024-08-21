@@ -82,11 +82,52 @@ There are files from each strain, in ISP2 and ISP2-ASW, besides the crude extrac
 Besides mzML files, there is a file metadata_table.tsv, that contains all the relevant information from this dataset. 
 Includes the names of the samples, relevant data collection, and taxonomic information. 
 
-It is important for later, that the information that 
+In addition, there is information relevant to the analysis, such as the names of the strains, the media used for culturing, and the antimicrobial activity. All this information is included in the format ATTRIBUTE_*
 
 <a href="/Figs/Metadata.jpg">
   <img src="/Figs/Metadata.jpg" alt="Data collection from *Streptomyces* sp. H-KF8, and *Streptomyces* sp. Vc74B-19." />
 </a>
+
+At last, there is a file named MZMine_FBMN_batch.xml that collects all the information necessary for the analysis using MZMine
+
+** Analysis using MZMine
+
+1. Load batch file
+
+Open MZMine3, and click on "Open", and then in "Batch Mode
+<a href="/Figs/batch_01.jpg">
+  <img src="/Figs/batch_01.jpg" alt="Load batch file" />
+</a>
+
+Here you should select load, and search for your downloaded files on your computer. Then select the MZMine_FBMN_batch.xml file
+In confirmation, you should select Replace the batch steps.
+
+<a href="/Figs/batch_02.jpg">
+  <img src="/Figs/batch_02.jpg" alt="Load batch file" />
+</a>
+
+Then double-click on import MS data
+
+<a href="/Figs/batch_03.jpg">
+  <img src="/Figs/batch_03.jpg" alt="Load batch file" />
+</a>
+
+Select from your computer the 18 mzML files from this dataset
+
+<a href="/Figs/batch_04.jpg">
+  <img src="/Figs/batch_04.jpg" alt="Load batch file" />
+</a>
+
+After this, every file should be included in the batch-processing mode. Select OK afterwards so the files begin to process in the meantime.
+
+<a href="/Figs/batch_05.jpg">
+  <img src="/Figs/batch_05.jpg" alt="Load batch file" />
+</a>
+
+
+
+
+
 
 
 In the future it will include:
