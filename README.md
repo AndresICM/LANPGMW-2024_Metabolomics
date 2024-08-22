@@ -454,14 +454,70 @@ Shah, A. K. P., Walter, A., Ottosson, F., Russo, F., Navarro-Díaz, M., Boldt, J
 
 ## Visualize the network using Cytoscape
 
-We need to check if our GNPS network is done processing. You might have received an email, otherwise go to your GNPS account and click on "Jobs"
+We need to check if our GNPS network is done processing. You might have received an email, otherwise, go to your GNPS account and click on "Jobs"
 
+<a href="/Figs/cytoscape_01.jpg">
+  <img src="/Figs/cytoscape_01.jpg" alt="FBMN" />
+</a>
 
+If your network is Done, then click on it.
+Afterward, click on "Direct Cytoscape Preview/Download"
 
+<a href="/Figs/cytoscape_02.jpg">
+  <img src="/Figs/cytoscape_02.jpg" alt="FBMN" />
+</a>
 
+If your network is not Done, then we could use a previously computed network, that holds the same data that we used in this workshop
 
+https://cytoscape.gnps2.org/process?task=568cc93ed2e84f20b2b94bd186b48ee8#{}
 
+Click on "Download Cytoscape File", and save it in your computer
 
+<a href="/Figs/cytoscape_03.jpg">
+  <img src="/Figs/cytoscape_03.jpg" alt="FBMN" />
+</a>
+
+Open the network on Cytoscape.
+We want to change the style of the network and color the nodes according to the strains.
+Click on "Style"
+
+<a href="/Figs/cytoscape_04.jpg">
+  <img src="/Figs/cytoscape_04.jpg" alt="FBMN" />
+</a>
+
+Select the pie chart icon on Image/Chart. This will help us figure out the abundance of each MS spectra, depending on the metadata parameter that we choose
+
+<a href="/Figs/cytoscape_05.jpg">
+  <img src="/Figs/cytoscape_05.jpg" alt="FBMN" />
+</a>
+
+In this case, we will select the two strains, and also the media
+Although we removed all the MS spectra present in the media, there might still be some nodes with MS spectra detected in some of the media samples.
+
+<a href="/Figs/cytoscape_06.jpg">
+  <img src="/Figs/cytoscape_06.jpg" alt="FBMN" />
+</a>
+
+If we click "Apply", we can observe the nodes present in each strain, and the media. In this case, the light blue means the MS spectra detected in *Streptomyces* sp. Vc74B-19
+
+In this Molecular Family, we can observe some MS spectra with annotations. Some are similar to Urdamycinone B, Dehydroxyaquayamycin, and other Angucycline-related compounds.
+
+<a href="/Figs/cytoscape_07.jpg">
+  <img src="/Figs/cytoscape_07.jpg" alt="FBMN" />
+</a>
+
+We can color now the nodes depending on the media where they are detected.
+Select the pie chart again in "Image/Chart", and now select ISP2 and ISP2-ASW. This will color ISP2 in red, and ISP2-ASW in light blue
+
+<a href="/Figs/cytoscape_08.jpg">
+  <img src="/Figs/cytoscape_08.jpg" alt="FBMN" />
+</a>
+
+We can observe that some nodes are detected mostly in ISP2. However, several angucycline-related compounds are detected almost exclusively in ISP2-ASW
+
+<a href="/Figs/cytoscape_09.jpg">
+  <img src="/Figs/cytoscape_09.jpg" alt="FBMN" />
+</a>
 
 
 
